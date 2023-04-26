@@ -1,0 +1,73 @@
+1 -Ao final do processamento, o valor da variável SOMA será 91.
+O código realiza um laço de repetição enquanto a variável K for menor do que a variável INDICE, onde a cada iteração, o valor de K é incrementado em 1 e SOMA é atualizado com a soma de SOMA e K.
+Assim, o laço irá executar 13 vezes, somando os números de 1 a 13. Portanto, o valor final da variável SOMA será a soma dos números de 1 a 13, que é igual a 91.
+
+2 - 
+import java.util.Scanner;
+
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        int num, fib1 = 0, fib2 = 1, nextTerm = 0;
+
+        // lê o número informado pelo usuário
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Informe um número: ");
+        num = sc.nextInt();
+
+        // calcula a sequência de Fibonacci
+        while (nextTerm < num) {
+            nextTerm = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = nextTerm;
+        }
+
+        // verifica se o número informado pertence à sequência de Fibonacci
+        if (nextTerm == num) {
+            System.out.println(num + " pertence à sequência de Fibonacci.");
+        } else {
+            System.out.println(num + " não pertence à sequência de Fibonacci.");
+        }
+    }
+
+}
+3 -
+a) 9 (a lógica é adicionar 2 ao número anterior)
+b) 128 (a lógica é multiplicar por 2 o número anterior)
+c) 49 (a lógica é elevar ao quadrado o número correspondente ao índice da sequência menos um)
+d) 100 (a lógica é adicionar 20 ao número anterior)
+e) 13 (a lógica é somar os dois números anteriores para obter o próximo número)
+f) 20 (a lógica é somar 2 ao número anterior, exceto pelo último número que é o próximo número ímpar após o número anterior)
+
+4 -
+tempo = distância / velocidade relativa
+Considerando que a distância entre as cidades é de 100 km e que o caminhão leva 5 minutos a mais para passar em cada pedágio, a distância total
+percorrida pelo carro é de 100 km, enquanto a distância total percorrida pelo caminhão é de 100 km mais 10 minutos (ou 1/6 de hora), que corresponde
+a uma distância adicional de:
+distância adicional = tempo x velocidade = (1/6) x 80 km/h = 13,3 km
+Portanto, a distância total percorrida pelo caminhão é de 100 km + 13,3 km = 113,3 km.
+Substituindo esses valores na fórmula acima:
+empo = (100 km + 113,3 km) / (110 km/h + 80 km/h) = 1,09 horas
+Agora, basta calcular a distância percorrida por cada veículo nesse tempo:
+distância percorrida pelo carro = 110 km/h x 1,09 h = 120 km
+distância percorrida pelo caminhão = 80 km/h x 1,09 h + 13,3 km = 101,2 km
+Portanto, quando se encontrarem na rodovia, o carro estará mais próximo da cidade de Ribeirão Preto, já que percorreu uma distância maior nesse tempo.
+6 -
+import java.util.Scanner;
+
+public class InverteString {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+
+        String palavraInvertida = "";
+        for(int i = palavra.length() - 1; i >= 0; i--) {
+            palavraInvertida += palavra.charAt(i);
+        }
+
+        System.out.println("A palavra invertida é: " + palavraInvertida);
+    }
+
+}
